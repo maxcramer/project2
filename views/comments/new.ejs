@@ -1,0 +1,13 @@
+<form class="" action="/restaurants/<%= restaurant.id %>/comments" method="POST">
+
+  <div class="field">
+    <label for="content">Type bellow to add a comment</label>
+    <textarea class="textarea" name="content" placeholder="E.g What an amazing place to eat!"></textarea>
+  </div>
+
+  <input type="hidden" name="name" value="<%= locals.user.username %>">
+
+  <div class="field">
+    <button class="danger">Submit Comment</button>
+  </div>
+</form>

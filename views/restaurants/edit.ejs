@@ -1,0 +1,64 @@
+<h2 class="title is-2">Edit <%= restaurant.name %></h2>
+
+<form method="POST" action="/restaurants/<%= restaurant.id %>">
+
+  <div class="field">
+    <label class="label" for="name">Name</label>
+    <div class="control">
+      <input name="name" class="input" type="text" value="<%= restaurant.name %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="coverPic">Restaurant Picture (URL)</label>
+    <div class="control">
+      <input name="coverPic" class="input" type="text" value="<%= restaurant.coverPic %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="location">Location</label>
+    <div class="control">
+      <input name="location" class="input" type="text" value="<%= restaurant.location %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="details">details</label>
+    <div class="control">
+      <input name="details" class="input" type="text" value="<%= restaurant.details %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="priceRange">Price Range</label>
+    <div class="control">
+      <input name="priceRange" class="input" type="text" value="<%= restaurant.priceRange %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="cuisine">Cuisine (Seperated by commer)</label>
+    <div class="control">
+      <input name="cuisine" class="input" type="text" value="<%= restaurant.cuisine %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="contactNumber">Contact Number</label>
+    <div class="control">
+      <input name="contactNumber" class="input" type="number" value="<%= restaurant.contactNumber %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="contactEmail">Contact Email</label>
+    <div class="control">
+      <input name="contactEmail" class="input" type="email" value="<%= restaurant.contactEmail %>">
+    </div>
+  </div>
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <button class="button is-primary">Edit Restaurant</button>
+</form>

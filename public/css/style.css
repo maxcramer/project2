@@ -1,0 +1,16 @@
+#footer {
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
+}
+
+#header {
+  position: static;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: -10px;
+  height: 10px;
+}

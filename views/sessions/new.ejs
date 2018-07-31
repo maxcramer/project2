@@ -1,0 +1,18 @@
+<% if (locals.message) { %>
+  <div class="message is-primary">
+    <div class="message-body">
+      <%= message %>
+    </div>
+  </div>
+<% } %>
+<form style="margin-top: 10px;"method="POST" action="/sessions">
+  <div  class="field">
+    <label for="email">Email</label>
+    <input class="input" type="text" name="email" id="email">
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input class="input" type="password" name="password" id="password">
+  </div>
+  <button style="margin-bottom: 290px; background-color: rgb(123, 189, 48);" class="button">Login</button>
+</form>

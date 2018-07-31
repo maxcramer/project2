@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eat Natural</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <% include ./partials/_header %>
+    <div class="container">
+
+      <% for (const type in locals.messages) { %>
+        <div class="message is-<%= type %>">
+          <div class="message-body">
+            <%= messages[type] %>
+          </div>
+        </div>
+      <% } %>
+
+
+
+      <%- body %>
+    </div>
+    <% include ./partials/_footer %>
+  </body>
+</html>
