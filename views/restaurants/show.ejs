@@ -1,38 +1,40 @@
 <div class="columns is-multilined">
-    <div class="column is-one-quater">
+  <div class="column is-half">
+    <h2 style="padding-top: 30px;"class="title is-2"><%= restaurant.name %></h2> <br>
+    <h2 class="subtitle is-6">Details: <br> <%= restaurant.details %></h2>
+    <h2 class="subtitle is-6">Cuisine Types: <%= restaurant.cuisine %></h2>
+    <h2 class="subtitle is-6">Price Range: <%= restaurant.priceRange %></h2>
+    <h2 class="subtitle is-6">Contact Number: <%= restaurant.contactNumber %></h2>
+    <h2 class="subtitle is-6">Contact Email: <%= restaurant.contactEmail %></h2>
+    <h2 class="subtitle is-6">Address: <br> <%= restaurant.location %></h2>
+  </div>
+
+
+  <div class="column is-half">
       <a href="/restaurants/<%= restaurant.id %>">
-        <img src=<%= restaurant.coverPic %> alt=<%= restaurant.name %> />
-        <hr/>
+        <img style="margin-top: 20px; height: 350px; width: 450px;"src=<%= restaurant.coverPic %> alt=<%= restaurant.name %> />
+        <h2 class="subtitle is-6">Star Rating: <br> <%= restaurant.starRating %></h2>
       </a>
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2 class="title is-2"><%= restaurant.name %></h2> <br>
-          <h2 class="subtitle is-4">Contact Number: <br> <%= restaurant.contactNumber %></h2>
-          <h2 class="subtitle is-4">Contact Email: <br> <%= restaurant.contactEmail %></h2>
-          <h2 class="subtitle is-4">Details: <br> <%= restaurant.details %></h2>
-          <h2 class="subtitle is-4">Cuisine Types: <br> <%= restaurant.cuisine %></h2>
-          <h2 class="subtitle is-4">Price Range: <br> <%= restaurant.priceRange %></h2>
-          <h2 class="subtitle is-4">Address: <br> <%= restaurant.location %></h2>
-        </div>
+  </div>
+
+</div>
+
+
+<div>
+  <%- include('../comments/index', { restaurant }) %>
+</div>
+
+<div>
+  <% if (locals.isLoggedIn) { %>
+    <div class="section">
+      <a class="button is-warning" href="/restaurants/<%= restaurant.id %>/edit">Edit</a>
+      <div class="level-right">
+        <form class="" action="/restaurants/<%= restaurant.id %>" method="POST">
+        <button class="button is-danger">DELETE</button>
+        <input type="hidden" name="_method" value="DELETE">
+        </form>
       </div>
-
-      <%- include('../comments/index', { restaurant }) %>
-
-      <% if (locals.isLoggedIn) { %>
-        <hr />
-        <div class="section">
-          <div class="level">
-            <div class="level-left">
-              <a class="button is-warning" href="/restaurants/<%= restaurant.id %>/edit">Edit</a>
-            </div>
-            <div class="level-right">
-              <form class="" action="/restaurants/<%= restaurant.id %>" method="POST">
-                <button class="button is-danger">DELETE</button>
-                <input type="hidden" name="_method" value="DELETE">
-              </form>
-            </div>
-          </div>
-        </div>
-      <% } %>
     </div>
+  </div>
+  <% } %>
 </div>

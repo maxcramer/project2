@@ -14,3 +14,11 @@
   margin-bottom: -10px;
   height: 10px;
 }
+
+.button {
+  background-color: #C0FFD9;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 3.5px;
+  border-bottom: 3.5px;
+}

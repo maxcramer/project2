@@ -33,7 +33,15 @@
   <div class="field">
     <label class="label" for="priceRange">Price Range</label>
     <div class="control">
-      <input name="priceRange" class="input" type="text" value="<%= restaurant.priceRange %>">
+      <select name="priceRange">
+        <% priceRangeValues.forEach(range => { %>
+          <option
+            <% if(range === restaurant.priceRange) { %>
+              selected
+            <%}%>
+            value="<%= range %>"><%= range %></option>
+        <% }) %>
+      </select>
     </div>
   </div>
 
