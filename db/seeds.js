@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/project2');
+const {DB_URI} = require('../config/environment');
+mongoose.connect(DB_URI);
 
 const Restaurant = require('../models/restaurant');
 const User = require('../models/user');
@@ -123,22 +124,22 @@ Restaurant
   ])
   .then(restaurants => {
     console.log(`Created ${restaurants.length} restaurants!`);
-    User
+    return User
       .create([
         {
-          name: 'Pete',
+          username: 'Pete',
           email: 'pete@en.com',
           password: 'p',
           passwordConfirmation: 'p',
-          profilePic: 'http://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890873.jpg',
+          profilePic: 'http://www.unitedagents.co.uk/sites/default/files/styles/client_single_image/public/thumbnails/image/guy-2.jpg?itok=Lkr9_XqV',
           favouriteFoodType: 'Curry, Burgers, Vegetarian'
         },
         {
-          name: 'Sandy',
+          username: 'Sandy',
           email: 'sandy@en.com',
           password: 's',
           passwordConfirmation: 's',
-          profilePic: 'http://cdn-wpmsa.defymedia.com/wp-content/uploads/sites/3/2014/02/stock-photography-working-mothers03.jpg',
+          profilePic: 'https://thenypost.files.wordpress.com/2018/02/lady-dorito.jpg?quality=90&strip=all&w=1236&h=820&crop=1',
           favouriteFoodType: 'Salads, Soups, Vegan'
         }
       ]);
