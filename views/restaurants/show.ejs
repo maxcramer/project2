@@ -1,8 +1,11 @@
 <div class="columns is-multilined">
   <div class="column is-half">
-    <h2 style="padding-top: 30px;"class="title is-2"><%= restaurant.name %></h2> <br>
+    <h2 style="padding-top: 30px;"class="title is-2"><%= restaurant.name %></h2>
     <h2 class="subtitle is-6">Details: <br> <%= restaurant.details %></h2>
-    <h2 class="subtitle is-6">Cuisine Types: <%= restaurant.cuisine %></h2>
+    <p>Cuisines: <% restaurant.cuisines.forEach(cuisine => { %>
+      <span class="tag"><%= cuisine %></span>
+      <% }) %>
+    </p> <br>
     <h2 class="subtitle is-6">Price Range: <%= restaurant.priceRange %></h2>
     <h2 class="subtitle is-6">Contact Number: <%= restaurant.contactNumber %></h2>
     <h2 class="subtitle is-6">Contact Email: <%= restaurant.contactEmail %></h2>
@@ -13,12 +16,13 @@
   <div class="column is-half">
       <a href="/restaurants/<%= restaurant.id %>">
         <img style="margin-top: 20px; height: 350px; width: 450px;"src=<%= restaurant.coverPic %> alt=<%= restaurant.name %> />
-        <h2 class="subtitle is-6">Star Rating: <br> <%= restaurant.starRating %></h2>
+        <% if(restaurant.averageRating) { %>
+          <h2 class="subtitle is-6">Average Rating: <%= restaurant.averageRating %> / 5</h2>
+        <% } %>
+        <%- include('../ratings/new', { restaurant }) %>
       </a>
   </div>
-
 </div>
-
 
 <div>
   <%- include('../comments/index', { restaurant }) %>

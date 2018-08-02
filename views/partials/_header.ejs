@@ -15,7 +15,13 @@
           <a class="navbar-item" href="/registrations/new">Sign Up!</a>
         <% } else { %>
           <a class="navbar-item" href="/restaurants/new">New Restaurant</a>
-          <a class="navbar-item" href="/sessions/delete">Log Out <%= locals.user.username %></a>
+          <a class="navbar-item" href="/profiles/<%= locals.user.id %>"><%= user.username %>s Profile</a>
+          <a class="navbar-item" href="/sessions/delete">Log <%= user.username %> Out</a>
+          <span>
+          <figure style="position: absolute;"class="image is-96x96">
+          <img style="height: 50px; width: 50px; padding-top: 2px; margin-left: 20px; border-radius: 100%;" src="<%= locals.user.profilePic %>" alt="<%= locals.user.profilePic %>">
+          </figure>
+          </span>
         <% } %>
       </div>
     </div>

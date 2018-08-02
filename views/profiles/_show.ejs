@@ -1,0 +1,17 @@
+<div class="columns is-multilined">
+  <div style="margin-left: 100px;"class="column is-half">
+    <h2 style="padding-top: 30px;" class="title is-2"><%= profile.username %></h2> <br>
+    <h2 class="subtitle is-6">Favourite Cuisines: <%= profile.favouriteFoodType %></h2>
+    <h2 class="subtitle is-6">Email: <%= profile.email %></h2>
+  </div>
+
+  <div class="column is-half">
+    <img style="margin-top: 20px; height: 350px; width: 350px; border-radius: 90%" src="<%= profile.profilePic %>" alt="<%= profile.profilePic %>" />
+  </div>
+</div>
+
+<div>
+    <div class="section">
+      <a class="button is-warning" href="/profiles/<%= profile.id %>/edit">Edit</a>
+  </div>
+</div>

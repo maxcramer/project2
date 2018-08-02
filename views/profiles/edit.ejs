@@ -1,0 +1,48 @@
+<form style="margin-bottom: 35px; margin-top: 10px;"action="/profiles/<%= profile.id %>" method="POST">
+
+  <div class="field">
+    <label class="label" for="username">Change Name</label>
+    <div class="control">
+      <input name="username" class="input" type="text" value="<%= profile.username %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="email">Change Email</label>
+    <div class="control">
+      <input name="email" class="input" type="email" value="<%= profile.email %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="profilePic">Change Profile Picture (URL)</label>
+    <div class="control">
+      <input name="profilePic" class="input" type="text" value="<%= profile.profilePic %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="favouriteFoodType">Change or add your favourite style of cuisine</label>
+    <div class="control">
+      <input name="favouriteFoodType" class="input" type="text" value="<%= profile.favouriteFoodType %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="password">Change Password</label>
+    <div class="control">
+      <input name="password" class="input" type="password" value="<%= profile.password %>">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="passwordConfirmation">Password Confirmation (if changed)</label>
+    <div class="control">
+      <input name="passwordConfirmation" class="input" type="password" value="<%= profile.passwordConfirmation %>">
+    </div>
+  </div>
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <button class="button is-primary">Edit</button>
+</form>

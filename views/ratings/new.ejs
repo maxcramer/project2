@@ -1,0 +1,29 @@
+<% if (locals.isLoggedIn && !restaurant.ratings.map(rating => rating.name).includes(locals.user.username)) { %>
+  <p style="color: black;">Please rate</p>
+  <form class="rating" action="/restaurants/<%= restaurant.id %>/ratings" method="POST">
+    <input type="hidden" name="rating" value="1">
+    <input type="hidden" name="name" value="<%= locals.user.username %>">
+    <button>⭐️</button>
+  </form>
+  <form class="rating" action="/restaurants/<%= restaurant.id %>/ratings" method="POST">
+    <input type="hidden" name="rating" value="2">
+    <input type="hidden" name="name" value="<%= locals.user.username %>">
+    <button>⭐️</button>
+  </form>
+  <form class="rating" action="/restaurants/<%= restaurant.id %>/ratings" method="POST">
+    <input type="hidden" name="rating" value="3">
+    <input type="hidden" name="name" value="<%= locals.user.username %>">
+    <button>⭐️</button>
+  </form>
+  <form class="rating" action="/restaurants/<%= restaurant.id %>/ratings" method="POST">
+    <input type="hidden" name="rating" value="4">
+    <input type="hidden" name="name" value="<%= locals.user.username %>">
+    <button>⭐️</button>
+  </form>
+  <form class="rating" action="/restaurants/<%= restaurant.id %>/ratings" method="POST">
+    <input type="hidden" name="rating" value="5">
+    <input type="hidden" name="name" value="<%= locals.user.username %>">
+    <button>⭐️</button>
+  </form>
+  <input type="hidden" name="rating" value="DELETE">
+<% } %>

@@ -31,7 +31,7 @@ function restaurantsNew(req, res) {
 }
 
 function restaurantsCreate(req, res) {
-  req.body.cuisine = req.body.cuisine.split(',');
+  req.body.cuisines = req.body.cuisines.split(',');
   Restaurant
     .create(req.body)
     .then(() => res.redirect('/restaurants'))

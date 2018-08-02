@@ -22,3 +22,16 @@
   border-left: 3.5px;
   border-bottom: 3.5px;
 }
+
+.rating {
+  display: inline;
+}
+
+.rating button {
+  border: none;
+  background-color: white;
+}
+
+.navbar {
+  padding-left: 140px;
+}
