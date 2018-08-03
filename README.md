@@ -4,7 +4,7 @@
 
 ## [Click here to view Eat Natural](https://maxproject2eatnatural.herokuapp.com/)
 
-## [Click here to view Git Reop](https://github.com/maxcramer/project2)
+## [Click here to view Git Repo](https://github.com/maxcramer/project2)
 
 ### Technology Used During Build
 * EJS
