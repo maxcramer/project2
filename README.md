@@ -4,8 +4,6 @@
 
 ## [Click here to view Eat Natural](https://maxproject2eatnatural.herokuapp.com/)
 
-## [Click here to view Git Repo](https://github.com/maxcramer/project2)
-
 ### Technology Used During Build
 * EJS
 * JavaScript
@@ -16,6 +14,7 @@
 * Heroku App
 
 #### Home Page
+
 ![Home Screen](./images/homescreen.png)
 #### Restaurants Index
 ![Restaurant Index](./images/index.png)
@@ -33,28 +32,26 @@
 
 ### Process
 
-#### Original Idea / Sketches
+#### Original Idea / Sketches & Wireframes
 - We had been given an option to do a review website for restaurants. This enabled us to reinforce the skills we had been learning the previous week. Before starting the build, I had designed a number of the pages, allowing me to have an end point to work towards.
+
 ##### Index
-![Index Sketch](./images/indexSketch.jpg)
+<div style="display: flex"><img height="250px" width="50%" alt="Index Sketch" src="./images/indexSketch.jpg" />
+<img height="250px" width="50%" alt="Index Wireframe" src="./images/indexwireframe.jpg" /></div>
+
 ##### Profile
-![Profile Sketch](./images/profileSketch.jpg)
+<div style="display: flex"><img height="250px" width="50%" alt="Profile Sketch" src="./images/profileSketch.jpg" />
+<img height="250px" width="50%" alt="Profile Wireframe" src="./images/profilewireframe.jpg" /></div>
+
 ##### Show
-![Show Sketch](./images/showloggedinsketch.jpg)
-
-
-#### Wire Frames
-##### User profile
-![User Profile](./images/profilewireframe.jpg)
-##### Index
-![Index](./images/indexwireframe.jpg)
-##### Show When Logged In
-![Show Page When Logged In](./images/showwireframe.jpg)
-#### Wins
-- The biggest win for me was giving users the ability to sign up & create accounts on the website. I had never done anything like this before, so was a huge learning curve.
+<div style="display: flex"><img height="250px" width="50%" alt="Login Sketch" src="./images/showloggedinsketch.jpg" />
+<img height="250px" width="50%" alt="Show Wireframe" src="./images/showwireframe.jpg" /></div>
 
 #### Blockers & Bugs
 - Having only studied EJS for a week prior to creating this site, it did take a day or two to get use to it. I did find though, with very little information online, it was one of those that was very logical as long as you understood the controllers from the models.
+
+#### Wins
+- The biggest win for me was giving users the ability to sign up & create accounts on the website. I had never done anything like this before, so was a huge learning curve.
 
 ### Future Features
 #### Mobile Responsive
