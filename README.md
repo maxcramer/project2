@@ -48,14 +48,14 @@
 <img height="250px" width="50%" alt="Show Wireframe" src="./images/showwireframe.jpg" /></div>
 
 #### Blockers & Bugs
-- Having only studied EJS for a week prior to creating this site, it did take a day or two to get use to it. I did find though, with very little information online, it was one of those that was very logical as long as you understood the controllers from the models.
+- Having only studied EJS for a week prior to creating this site, it did take a day or two to get used to it. I did find though, with very little information online, it was one of those that was very logical as long as you understood the controllers from the models.
 
 #### Wins
 - The biggest win for me was giving users the ability to sign up & create accounts on the website. I had never done anything like this before, so was a huge learning curve.
 
 ### Future Features
 #### Mobile Responsive
-- If more time were available for this project, I would of made the entire website mobile responsive, so users would be able to find the best vegan & vegetarian restaurants while out on the go.
+- If more time were available for this project, I would have made the entire website mobile responsive, so users would be able to find the best vegan & vegetarian restaurants while out on the go.
 
 #### Favourite Restaurants
 - My next feature to add would have been to add a favourite option to the options. This would allow users once logged in to click a button on the index page on the restaurants they really liked or wanted to save. This list would then be able to appear on their personal profile.
